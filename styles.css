@@ -1,0 +1,169 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    /* footer support */
+    margin-bottom: 100px;
+  }
+
+.restart {
+  display:none;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0px;
+}
+
+.title {
+  font-size: 32px;
+  color: greenyellow;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+.para1 {
+  font-size: 20px;
+  margin-top: 40px;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+.begin {
+  font-size: 32px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.restart {
+  font-size: 32px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.timer {
+  font-size: 32px;
+  margin: 0;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.aitalk {
+  text-align: center;
+  font-size: 32px;
+  margin: 0;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.final {
+  text-align: center;
+  font-size: 32px;
+  margin: 0;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.playerscoreshow {
+  text-align: center;
+  font-size: 32px;
+  margin: 0;
+  position: absolute;
+  top: 60%;
+  left: 20%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.computerscoreshow {
+  text-align: center;
+  font-size: 32px;
+  margin: 0;
+  position: absolute;
+  top: 60%;
+  left: 80%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.playername {
+  text-align: center;
+  font-size: 32px;
+  margin: 0;
+  position: absolute;
+  top: 45%;
+  left: 20%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.computername {
+  text-align: center;
+  font-size: 32px;
+  margin: 0;
+  position: absolute;
+  top: 45%;
+  left: 80%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.psr {
+  display: flex;
+  justify-content:space-between;
+  gap: 30px;
+  text-align: center;
+  margin: 0;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.button {
+  font-size: 32px;
+}
+
+#paper {
+  background-image: url('images/paper.png');
+  background-position: center;
+  background-size: 134px 134px;
+  height: 134px;
+  width: 134px;
+}
+
+#scissors {
+  background-image: url('images/scissors.png');
+  background-position: center;
+  background-size: 134px 134px;
+  height: 134px;
+  width: 134px;
+}
+
+#rock {
+  background-image: url('images/rock.png');
+  background-position: center;
+  background-size: 134px 134px;
+  height: 134px;
+  width: 134px;
+}

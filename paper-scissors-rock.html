@@ -5,75 +5,46 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Paper Scissors Rock</title>
+    <script src="psr.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+
 </head>
 
 <body>
 
-    <script>
-        //takes player choice and computer choice and runs it against the possible outcomes
-        function playRound(playerSelection, computerSelection) {
-            //possible outcomes and returns a string with an answer
-            if (playerSelection === computerSelection) {
-                return "No winner, try again"
-            } else if (playerSelection === "rock" && computerSelection === "scissors") {
-                playerPoints = playerPoints + 1;
-                return "You Win! rock beats scissors"
-            } else if (playerSelection === "rock" && computerSelection === "paper") {
-                computerPoints = computerPoints + 1;
-                return "You Lose! rock loses to paper"
-            } else if (playerSelection === "paper" && computerSelection === "scissors") {
-                computerPoints = computerPoints + 1;
-                return "You Lose! paper loses to scissors"
-            } else if (playerSelection === "paper" && computerSelection === "rock") {
-                playerPoints = playerPoints + 1;
-                return "You Win! paper beats rock"
-            } else if (playerSelection === "scissors" && computerSelection === "rock") {
-                computerPoints = computerPoints + 1;
-                return "You Lose! scissors loses to rock"
-            } else if (playerSelection === "scissors" && computerSelection === "paper") {
-                playerPoints = playerPoints + 1;
-                return "You Win! scissors beats paper"
-            }
+    <header>
+        <h1 class="title">Nuclear Meltdown</h1>
+    </header>
 
-        }
-        //tracks player and computer win/loss
-        let playerPoints = 0;
-        let computerPoints = 0;
-        // uses a random number generator to choose PSR
-        function getComputerChoice(choice) {
-            let randomNumber = Math.floor(Math.random() * 3) + 1
+    <div class="para1">
+        <p class="tour">
+            You are on a tour at the local nuclear power plant.
+        </p>
+        <p class="emergency">
+            While you are in the control room the emergency alarm starts to go off.
+        </p>
+        <p class="mission">
+            You hear the intercoms say "You have 30 seconds to beat the AI at paper, scissors, rock, 5 times or this facility will self-destruct"
+        </p>
+    </div>
+    <div id="timer" class="timer"></div>
+    <button id="begin" class="begin">START</button>
+    <div id="final" class="final"></div>
+    <div id="clickme" class="clickme">
+        <div class="playername" id="playername">YOU</div>
+        <div class="computername" id="computername">AI</div>
+        <div id="playerscoreshow" class="playerscoreshow">0</div>
+        <div id="computerscoreshow" class="computerscoreshow">0</div>
+        <div id="aitalk" class="aitalk"></div>
 
-            if (randomNumber === 1) {
-                choice = "paper";
-            } else if (randomNumber === 2) {
-                choice = "scissors";
-            } else {
-                choice = "rock";
-            }
-            return choice;
-        }
-        //runs the game for 5 rounds and keeps track of the points with a winner
-        function game() {
-            for (let i = 0; i < 5; i++) {
-                let askedQuestion = prompt("What do you choose: ");
-                const playerSelection = askedQuestion.toLowerCase();
-                console.log("You have selected: " + playerSelection);
-                const computerSelection = getComputerChoice();
-                console.log("The bot selected: " + computerSelection);
-                console.log(playRound(playerSelection, computerSelection));
-                console.log("You have " + playerPoints + " points");
-                console.log("The bot has " + computerPoints + " points");
-            }
-            if(playerPoints > computerPoints){
-                console.log("You Win! " + playerPoints + " points to " + computerPoints);
-            } else {
-                console.log("You Lose! " + computerPoints + " points to " + playerPoints);
-            }
-        }
+        <div id="psr" class="psr">
+        <button id="paper" class="button"></button>
+        <button id="scissors" class="button"></button>
+        <button id="rock" class="button"></button>
+    </div>
+    </div>
 
-        game();
-
-    </script>
+    <button id="restart" class="restart">Try again?</button>
 </body>
 
 </html>
